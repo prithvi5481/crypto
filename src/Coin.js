@@ -11,6 +11,7 @@ const Coin = ({name, image, symbol, price, volume}) => {
             </div>
             <div className='coin-data'>
                 <p className='coin-price'>${price}</p>
+                {/* toLocaleString is used to arrange comas eg. 1,23,000 */}
                 <p className='coin-volume'>${volume.toLocaleString()}</p>
 
             </div>
