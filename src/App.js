@@ -32,11 +32,10 @@ const filteredCoins = coins.filter(coin=>
       <div className='coin-search'>
         <h1 className='coin-text'>Search a currency</h1>
         <form>
-          <input 
-          type='text' 
+          <input type='text' 
           placeholder='Search' 
-          classNane='coin-input' 
-          onChange={handleChange}></input>
+          className='coin-input' 
+          onChange={handleChange} />
         </form>
       </div>
       {filteredCoins.map(coin=>{
@@ -46,8 +45,10 @@ const filteredCoins = coins.filter(coin=>
             name={coin.name}
             image={coin.image}
             symbol={coin.symbol}
-            volume={coin.market_cap}
+            marketcap= {coin.market_cap}
             price={coin.current_price}
+            priceChange={coin.price_change_percentage_24h}
+            volume={coin.total_volume}
           />
         );
       })}
